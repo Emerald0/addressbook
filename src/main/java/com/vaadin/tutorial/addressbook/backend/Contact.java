@@ -22,7 +22,34 @@ public class Contact implements Serializable, Cloneable {
     private String phone = "";
     private String email = "";
     private Date birthDate;
+    
+    private String Task="";
+    private Date StartDate;
+    private Date EndDate;
 
+    public void setTask(String task){
+    	this.Task=task;
+    }
+    
+    public String getTask(){
+    	return Task;
+    }
+    
+    public void setStartDate(Date startdate){
+    	this.StartDate=startdate;
+    }
+    
+    public Date getStartDate(){
+    	return StartDate;
+    }
+    
+    public void setEndDate(Date enddate){
+    	this.EndDate=enddate;
+    }
+    public Date getEndDate(){
+    	return EndDate;
+    }
+    
     public Long getId() {
         return id;
     }
@@ -75,7 +102,8 @@ public class Contact implements Serializable, Cloneable {
     public Contact clone() throws CloneNotSupportedException {
         try {
             return (Contact) BeanUtils.cloneBean(this);
-        } catch (Exception ex) {
+        } 
+        catch (Exception ex) {
             throw new CloneNotSupportedException();
         }
     }
