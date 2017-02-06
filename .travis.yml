@@ -1,5 +1,13 @@
 language: java
-install: 
+install:
 - mvn install
-jdk: 
+jdk:
 - oraclejdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: g+hLy08vzove2p8GnQ1EhQKEvf3PEWAuJSuaT3lcy6F8J5nLSA791iTRpxSgY0ml2s+SXjs1SeXXAO4z0clrWnB53cC4lZDQLbzJO0AvNk/QmEMf/L7Y3Ju8lRY8mq38d+I782RKBYyoJw+SqxV9Sjwi7qq8M7hLf3OZAtuAmp9Y0ooIn1u+KTuftVPZZSdeBliDn7vh7RK2Gv20Iycxf1V/wCDNcNevglw7GWUreVd9x4zsMlEisTvADAbjYdhLCKonjX/nPKHn8ByAU3q8wAfScjtiV5TF/htCZXlzrmpB2xo/M+N16GdisYeP/yykkGitCNgMdVuzNbzksgk+IGw6G5Nyo9SzzVgNORV8cwdbHnhIHe/c+qrcbWaWR9iPXTaAiKDLS/uK5k4DgCaHqY9vl4Zn9cQao8xNvzevRpZYH9TiXN3zLf7TLcWpKQCq/3/Bi0aAo33OcGIg9tum339H1UY68+OqsJFctS8C4vPuPn16QGoPuiTzSCQK0Tdivwb3inRXEIhYNnhMaoqd5hiU8wDJEdp3g/TXpUFasc4Aq9qHwWI0By5FG0iPpl7IapgoF7WNxYZ1NhloxylQxsZauoWPjUIFwGZI3+MBZlo6abU9sbvgYOi8dEEUivS7D6DxxEr6hWRf0H9Fr0p6xUzQw3PgiN5S4wwNc/vQ7No=
+  app: cath-addressbook
+  on:
+    repo: Emerald0/addressbook
+    branch: todo_tasks
