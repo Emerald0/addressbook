@@ -65,7 +65,8 @@ public class ContactService {
                 if (passesFilter) {
                     arrayList.add(contact.clone());
                 }
-            } catch (CloneNotSupportedException ex) {
+            } 
+            catch (CloneNotSupportedException ex) {
                 Logger.getLogger(ContactService.class.getName()).log(
                         Level.SEVERE, null, ex);
             }

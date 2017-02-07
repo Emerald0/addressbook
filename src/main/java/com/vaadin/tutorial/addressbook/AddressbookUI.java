@@ -39,6 +39,7 @@ public class AddressbookUI extends UI {
     TextField filter = new TextField();
     Grid contactList = new Grid();
     Button newContact = new Button("New contact");
+    
 
     // ContactForm is an example of a custom component class
     ContactForm contactForm = new ContactForm();
@@ -76,7 +77,7 @@ public class AddressbookUI extends UI {
 
         contactList
                 .setContainerDataSource(new BeanItemContainer<>(Contact.class));
-        contactList.setColumnOrder("firstName", "lastName", "Task","Start Date","End Date");
+        contactList.setColumnOrder("firstName", "lastName", "task", "startDate", "endDate","email");
         contactList.removeColumn("birthDate");
         contactList.removeColumn("phone");
         contactList.setSelectionMode(Grid.SelectionMode.SINGLE);
@@ -109,7 +110,6 @@ public class AddressbookUI extends UI {
 
         HorizontalLayout mainLayout = new HorizontalLayout(left, contactForm);
         mainLayout.setSizeFull();
-        mainLayout.setExpandRatio(left, 1);
 
         // Split and allow resizing
         setContent(mainLayout);
